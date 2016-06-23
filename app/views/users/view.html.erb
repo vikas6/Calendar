@@ -1,0 +1,14 @@
+<div class="main-content">
+	<div class="form">
+		<h1>Profile</h1>
+  			<h3>First Name:</h3> <%= @user.first_name %><br>
+  			<h3>Last Name:</h3> <%= @user.last_name %><br>
+  			<h3>Email:</h3> <%= @user.email %><br>
+  			<h3>Phone No:</h3> <%= @user.phone_no %><br>
+  			<h3>Gender:</h3> <%= @user.gender %><br>
+  			<button class="profile_edit"> <%= link_to "Edit", profile_edit_path %></button>
+  			<button class="profile_close"> <%= link_to "Close", events_path %></button>
+	</div>
+</div>
+
+ 

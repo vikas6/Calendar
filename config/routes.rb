@@ -1,9 +1,20 @@
 Rails.application.routes.draw do
-  get 'event' => "events#new", :as => "events"
-
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "log_in" => "sessions#new", :as => "log_in"
   get "sign_up" => "users#new", :as => "sign_up"
+
+  get "profile_view" => "users#view", :as => "profile_view"
+  get "profile_edit" => "users#profile_edit", :as => "profile_edit"
+  post "profile_update" => "users#profile_update", :as => "profile_update"
+
+  get "password_edit" => "users#password_edit", :as => "password_edit"
+  post "password_update" => "users#password_update", :as => "password_update"
+
+  get 'event' => "events#new", :as => "events"
+  post 'event_create' => "events#create", :as => "event_create"
+  get 'event_edit' => "events#edit", :as => "event_edit"
+  get 'event_update' => "events#update", :as => "event_update"
+
   root :to => "sessions#new"
   resources :users
   resources :sessions

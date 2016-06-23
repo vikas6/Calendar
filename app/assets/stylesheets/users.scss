@@ -1,3 +1,10 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.form button.profile_edit {width: 22%;
+    float: left; padding: 10px;}
+.form button.profile_close {width: 22%;
+    float: right; padding: 10px;}
+.form button.profile_edit a,.form button.profile_close a {color: white;text-decoration: none;}
+.form h3 {width: 30%;display: -webkit-inline-box;float: none;}
+form button.password_close a {color: white;text-decoration: none;}

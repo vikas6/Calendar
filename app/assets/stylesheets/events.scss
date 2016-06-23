@@ -1,3 +1,12 @@
 // Place all the styles related to the Events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+form button.event_create {width: 22%;
+    float: left; padding: 10px;}
+form button.event_edit {width: 22%;
+    float: right; padding: 10px;}
+form button.event_edit a {color: white;text-decoration: none;}
+
+.form form p label[for=start_date],label[for=end_date] {display: block; width:20%}
+.form form p input[for=start_date] {float: left; }
+.form form p input[type=date] {width: 50%; display: block;}

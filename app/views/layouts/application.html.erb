@@ -13,8 +13,17 @@
   </div>
   <% if current_user %>
   <div class="user_nav">
-    <h2> Logged in as</h2><h3><%= current_user.username %><%= link_to "Log out", log_out_path %></h3>
-      <% end %>
+    <h4><%= current_user.username %></h4>
+    <div class="dropdown_menu">
+      <button class="dropbtn">Menu</button>
+      <div class="menu-content">
+        <%= link_to "Home", events_path %>
+        <%= link_to "Profile", profile_view_path %>
+        <%= link_to "Password Change", password_edit_path %>
+        <%= link_to "Log out", log_out_path %>
+      </div>
+    </div>
+    <% end %>
   </div>
 </div>
 <%= yield %>
