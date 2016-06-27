@@ -4,9 +4,10 @@
     <%= form_tag event_create_path do %>
       <p><%= text_field_tag :title, nil, placeholder: 'Event title...',:required => true %></p>
        <p><%= label_tag :when %></p>
-       <p><%= time_tag Time.now  %></p>
+       <p><%= text_field_tag :start_date, params[:date], readonly: true %></p>
       <button class="event_create">Create</button>
-      <button class="event_edit"> <%= link_to "Edit", event_edit_path %></button>
+      <%= select_tag 'user_ids', options_for_select(@users.collect{ |u| [u.username, u.id] }), :multiple => true %>
+      <button class="event_edit"><%= link_to "Edit event", event_edit_path %></button>
     <% end %>
 	</div>
 </div>

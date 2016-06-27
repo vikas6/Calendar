@@ -12,6 +12,9 @@
  *
  *= require_tree .
  *= require_self
+ *= require simple_calendar
+ 
+
  */
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
@@ -115,7 +118,7 @@ body {
 }
 
 
-#header h1{color: #8C0605;width: 30%;margin-left: 35%;}
+#header h1{color: #8C0605;margin-left: 35%;}
 .user_nav {float: right;width: 14%;}
 .user_nav h4 {width: 50%;float: left;margin-top: 0px;}
 .dropbtn {

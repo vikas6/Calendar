@@ -1,7 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'pry-rails', :group => :development
+#bootstrap Sass
+gem "therubyracer"
+gem "twitter-bootstrap-rails"
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'	
 
+gem 'pry-rails', :group => :development
+gem "simple_calendar", "~> 2.0"
 #encryption
 gem "bcrypt-ruby", :require => "bcrypt"
 #Validates Timeliness

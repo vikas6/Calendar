@@ -10,10 +10,11 @@ Rails.application.routes.draw do
   get "password_edit" => "users#password_edit", :as => "password_edit"
   post "password_update" => "users#password_update", :as => "password_update"
 
-  get 'event' => "events#new", :as => "events"
+  get 'home' => "events#home", :as => "home"
+  post 'event' => "events#new", :as => "events"
   post 'event_create' => "events#create", :as => "event_create"
   get 'event_edit' => "events#edit", :as => "event_edit"
-  get 'event_update' => "events#update", :as => "event_update"
+  post 'event_update' => "events#update", :as => "event_update"
 
   root :to => "sessions#new"
   resources :users

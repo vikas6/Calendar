@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
 	validates :date_of_birth, timeliness: { on_or_before: lambda { Date.current }, type: :date }
   validates_presence_of :username
   validates_uniqueness_of :username
+  scope :all_except, ->(user) { where.not(id: user) }
+
   before_save :encrypt_password
   validates_presence_of :password_hash, :on => :create
   

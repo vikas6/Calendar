@@ -1,0 +1,16 @@
+<div class="main-content">
+	<div class="calendar">
+    <%= month_calendar do |date| %>
+    	<%= link_to "#{date.to_s.last(2)}", events_path(date: date), method: :post %>
+    	<% if @invitations.present? %>
+    		<% @invitations.each do |invitation| %>
+    			<% event=invitation.event %>
+    			<h5><%= show_event(event, date) %></h5>
+		    <% end %>
+    	<% end %>
+	    <% @events.each do |event| %>
+      	<h5><%= show_event(event, date) %></h5>
+			<% end %>
+    <% end %>
+  </div>
+</div>
